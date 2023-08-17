@@ -1,26 +1,4 @@
-const countries = [
-    'Albania',
-    'Bolivia',
-    'Canada',
-    'Denmark',
-    'Ethiopia',
-    'Finland',
-    'Germany',
-    'Hungary',
-    'Ireland',
-    'Japan',
-    'Kenya',
-  ]
-  
-  const webTechs = [
-    'HTML',
-    'CSS',
-    'JavaScript',
-    'React',
-    'Redux',
-    'Node',
-    'MongoDB',
-  ]
+
 //1
 const arrayEmpty = [];
 //2
@@ -69,20 +47,17 @@ itCompanies.forEach(element => console.log(element.toUpperCase()));
 console.log(itCompanies.slice(0, itCompanies.length - 1).join(', '), 'and', itCompanies[itCompanies.length  - 1], 'are big IT companies.');
 //13
 let findCompany = 'Facebook';
-(itCompanies.indexOf(findCompany) != -1) ? console.log('Facebook') : console.log('company is not found');
+(itCompanies.includes(findCompany)) ? console.log(findCompany) : console.log('company is not found');
 //14
 const filteredArray = [];
 itCompanies.forEach(element => {
-    let count = 0;
-    element.split('').forEach(char => {
-        if (char === 'o' ) {
-            count += 1;
-        }
-    })
-    if (count === 2) {
+    let str = element.split('');
+    let first = str.indexOf('o');
+    let second = str.lastIndexOf('o')
+    if ((first && second != -1) && (first != second)) {
         filteredArray.push(element);
     }
-})
+});
 console.log(filteredArray);
 //15
 itCompanies.sort();
@@ -103,6 +78,6 @@ itCompanies.shift();
 let start = Math.trunc(itCompanies.length / 2);
 itCompanies.splice(start, 1);
 //22
-itCompanies.unshift();
+itCompanies.pop();
 //23
 itCompanies.splice(0, itCompanies.length);
