@@ -30,12 +30,20 @@ if (countriesNew.length % 2) {
     middlCountry.push(countriesNew[middlIndex(countriesNew)]);
 };
 //Divide the countries array into two equal arrays
-let arrayFirst = [];
-let arraySecond = [];
-if (countriesNew.length % 2) {
-    arrayFirst = countriesNew.slice(0, middlIndex(countriesNew) + 1);
-    arraySecond = countriesNew.slice(middlIndex(countriesNew) + 1, countriesNew.length);
-} else {
-    arrayFirst = countriesNew.slice(0, middlIndex(countriesNew));
-    arraySecond = countriesNew.slice(middlIndex(countriesNew), countriesNew.length);
-}
+
+//let arrayFirst = [];
+//let arraySecond = [];
+// if (countriesNew.length % 2) {
+//     arrayFirst = countriesNew.slice(0, middlIndex(countriesNew) + 1);
+//     arraySecond = countriesNew.slice(middlIndex(countriesNew) + 1, countriesNew.length);
+// } else {
+//     arrayFirst = countriesNew.slice(0, middlIndex(countriesNew));
+//     arraySecond = countriesNew.slice(middlIndex(countriesNew), countriesNew.length);
+// }
+let arrayFirst = (countriesNew.length % 2) 
+    ? countriesNew.slice(0, middlIndex(countriesNew) + 1) 
+    : countriesNew.slice(0, middlIndex(countriesNew));
+let arraySecond = (countriesNew.length % 2) 
+    ? countriesNew.slice(middlIndex(countriesNew) + 1, countriesNew.length) 
+    : countriesNew.slice(middlIndex(countriesNew), countriesNew.length);
+console.log(arrayFirst, arraySecond);
