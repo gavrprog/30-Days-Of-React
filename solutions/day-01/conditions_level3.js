@@ -1,6 +1,7 @@
 //1
 let month = prompt('Enter a month:').toLowerCase();
 month = month.charAt(0).toUpperCase() + month.slice(1);
+
 switch (month) {
     case 'January':
     case 'March ':

@@ -43,6 +43,7 @@ switch (season) {
 //3
 let day = prompt('What is the day today?').toLowerCase();
 day = day.charAt(0).toUpperCase() + day.slice(1);
+
 switch (day) {
     case 'Saturday':
     case 'Sunday':

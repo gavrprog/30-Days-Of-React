@@ -54,6 +54,7 @@ itCompanies.forEach(element => {
     let str = element.split('');
     let first = str.indexOf('o');
     let second = str.lastIndexOf('o')
+    
     if ((first && second != -1) && (first != second)) {
         filteredArray.push(element);
     }

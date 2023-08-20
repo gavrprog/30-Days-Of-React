@@ -4,6 +4,7 @@ let age = prompt('Enter your age:');
 //2
 let myAge = 46;
 let yourAge = prompt('Enter your age:');
+
 if (yourAge > myAge) {
     console.log(`You are ${yourAge - myAge} years older than me.`);
 } else if (yourAge == myAge) {
@@ -14,6 +15,7 @@ if (yourAge > myAge) {
 //3.1
 let a = 5;
 let b = 8;
+
 if (a > b) {
     console.log('a is greater than b');
 } else {

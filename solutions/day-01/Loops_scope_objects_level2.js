@@ -49,28 +49,32 @@ const users = {
       points: 40
     }
   }
-  //1
-  let maxUser, numberSkill, max = 0;
-  for (let user in users) {
+
+//1
+let maxUser, numberSkill, max = 0;
+
+for (let user in users) {
     numberSkill = users[user].skills.length
     if (numberSkill > max) {
-    maxUser = user
-    max = numberSkill
+        maxUser = user
+        max = numberSkill
     }
-  }
-  console.log(maxUser)
+}
+console.log(maxUser)
+
 //2
 let lCount = 0
 let pCount = 0
+
 for (let user in users) {
-  if (users[user].isLoggedIn == true) {
-    lCount++
-  }
-  if (users[user].points >= 50) {
-    pCount++
-  }
+    if (users[user].isLoggedIn == true) {
+        lCount++
+    } else if (users[user].points >= 50) {
+        pCount++
+    }
 }
 console.log(pCount, lCount)
+
 //3
 function search(skill){
     for (let element of ['MongoDB', 'Express', 'React', 'Node']) {
@@ -80,13 +84,27 @@ function search(skill){
     }
 }
 for (let user in users) {
-    let mino = 0;
+    let mern = 0;
+
     for (let skill of users[user].skills) {
         if (search(skill)) {
-            mino++
+            mern++
         }
     }
-    if (mino === 4) {
+    if (mern === 4) {
         console.log(user)
     }
 }
+
+//4
+let copyUser = Object.assign({}, users)
+copyUser.Michael = {}
+
+//5
+let keys = Object.keys(users)
+
+//6
+let properties = Object.values(users)
+
+//7
+//do not understand what have I do
