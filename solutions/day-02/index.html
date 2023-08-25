@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>title</title>
+</head>
+<body>
+    <div class='root'></div>
+
+    <script
+        crossorigin
+        src="https://unpkg.com/react@16/umd/react.development.js"
+        ></script>
+        <script
+        crossorigin
+        src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"
+        ></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        <script type="text/babel">
+
+        const title = 'The first step in React is started'
+        const list = ['Meine', 'Deine', 'Seine']
+        const listUl = list.map((element) => <li>{element}</li>)
+        const styleMain = {
+            color: 'red',
+            background: 'grey'
+        }
+        const styleFooter = {
+            fontSize: '18px',
+            color: 'orange'
+        }
+        const rootElement = document.querySelector('.root')
+        const main = (
+            <main>
+                <div style={styleMain}>
+                    <h1>{title}</h1>
+                    <p>Samthing importent here</p>
+                    <ul>{listUl}</ul>
+                </div>
+            </main>
+        )
+        const footer = (
+            <footer style={styleFooter}>
+                <p>Copyright 2023</p>
+            </footer>
+        )
+        const app = (
+            <div>
+                {main}
+                {footer}
+            </div>
+        )
+
+        ReactDOM.render(app, rootElement)
+    </script>
+</body>
+</html>
