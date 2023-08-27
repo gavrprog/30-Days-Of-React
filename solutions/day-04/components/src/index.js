@@ -10,12 +10,12 @@ import symbolWing from './images/wing.png'
 import './style.css'
 
 const rootElement = document.getElementById('root');
-const title = (
+const Title = () => (
   <div className='title'>
     <h1>Front End Technologies</h1>
   </div>
 )
-const imagesTech = (
+const ImagesTech = () => (
   <div className = 'wrapp'>
     <img src={imageHTML} alt="image HTML" />
     <img src={imageCSS} alt="image CSS" />
@@ -26,9 +26,10 @@ const imagesTech = (
 
 const arraySkills = ['HTML', 'CSS', 'Sass', 'JS', 'React', 'Redux', 'Node', 'MongoDB', 'Python', 'Flask', 'Django', 'NumPy', 'Pandas', 'Data Analyst', 'MySQL', 'GaphQL', 'D3.js', 'GatsBy', 'Docker', 'Heroku', 'Git']
 const arrayInput = ['First name', 'Last name', 'Email']
-const inputs = arrayInput.map((elem) => <input className='soft' type="text" placeholder={elem}/>)
-const skills = arraySkills.map((element) => <div className="my-skills">{element}</div>)
-const subscriber = (
+const inputs = arrayInput.map((el) => <input className='soft' type="text" key={el} placeholder={el}/>)
+const skills = arraySkills.map((el) => <div className="my-skills" key={el}>{el}</div>)
+
+const Subscriber = () => (
   <form>
     <div className="submit-form soft">
       <div className='title main'>
@@ -55,7 +56,8 @@ const prof  = 'Senior Developer'
 const address = 'Finland'
 const date = 'Aug. 30, 2020'
 const symbol = <img src={symbolWing} width="25px" alt="symbol Wing" />
-const card = (
+
+const Card = () => (
   <div className="card">
     <img src={photoAuthor} alt="photo Ahmed" />
     <h2>{author.firstName.toUpperCase()}{' '}{author.lastName.toUpperCase()} {symbol}</h2>
@@ -67,13 +69,45 @@ const card = (
     <p>Joined on {date}</p>
   </div>
 )
+const hexColor = () => {
+  let str = '0123456789abcdef'
+  let color = ''
+  for (let i = 0; i < 6; i++){
+    color += str[Math.floor(Math.random() * str.length)]
+  }
+  return '#' + color
+}
 
-const app = (
+const rendomColor = () => {
+  let colorObj = {backgroundColor: ''}
+  let color = ''
+  let array = []
+  for (let i = 0; i < 5; i++){
+    color = hexColor()
+    colorObj.backgroundColor = color
+    console.log('i=', i, colorObj)
+    array.push(<div className="color-blocks" key={color} style={colorObj}>{color}</div>)
+  }
+  return array
+}
+const Color = () => (
   <div>
-    {title}
-    {imagesTech}
-    {subscriber}
-    {card}
+    {rendomColor()}
   </div>
 )
-ReactDOM.createRoot(rootElement).render(app)
+
+const App = () => (
+  <div>
+    <Title/>
+    <ImagesTech/>
+    <Subscriber/>
+    <Card/>
+    <Color/>
+  </div>
+)
+
+ReactDOM.createRoot(rootElement).render(
+<React.StrictMode>
+  <App/>
+</React.StrictMode>
+)

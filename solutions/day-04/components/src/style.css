@@ -3,7 +3,7 @@
     border-color: transparent;
 }
 .wrapp > img {
-    height: 150px;
+    height: 200px;
     margin: 0 50px;
   }
 .wrapp {
@@ -88,4 +88,9 @@ button {
 }
 h2 {
     font-weight: 500;
+}
+.color-blocks {
+    height: 50px;
+    text-align: center;
+    color: white;
 }

@@ -20,7 +20,7 @@
 
         const title = 'The first step in React is started'
         const list = ['Meine', 'Deine', 'Seine']
-        const listUl = list.map((element) => <li>{element}</li>)
+        const listUl = list.map((element) => <li key={element}>{element}</li>)
         const styleMain = {
             color: 'red',
             background: 'grey'
