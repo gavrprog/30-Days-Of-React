@@ -1,0 +1,40 @@
+* {
+    font-family: 'Segoe UI', sans-serif;
+    border-color: transparent;
+}
+
+.card {
+    border-radius: 8px;
+    margin: 10px;
+    background-color: aliceblue;
+    padding: 20px 50px;
+}
+
+.card > img {
+    border-radius: 50%;
+}
+
+.my-skills {
+    display: inline-block;
+    background-color: #2acfcf;
+    min-width: 50px;
+    color: white;
+    margin: 0 5px;
+    border-radius: 8px;
+    text-align: center;
+    padding: 8px;
+    margin: 10px;
+    font-weight: 500;
+}
+h2 {
+    font-weight: 500;
+}
+.color-blocks {
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    color: white;
+}
+.color-wrapp {
+    vertical-align: middle;
+}

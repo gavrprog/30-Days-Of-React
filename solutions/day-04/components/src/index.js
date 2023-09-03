@@ -79,19 +79,16 @@ const hexColor = () => {
 }
 
 const rendomColor = () => {
-  let colorObj = {backgroundColor: ''}
   let color = ''
   let array = []
   for (let i = 0; i < 5; i++){
     color = hexColor()
-    colorObj.backgroundColor = color
-    console.log('i=', i, colorObj)
-    array.push(<div className="color-blocks" key={color} style={colorObj}>{color}</div>)
+    array.push(<div className="color-blocks" key={color} style={{backgroundColor: color}}>{color}</div>)
   }
   return array
 }
 const Color = () => (
-  <div>
+  <div className="color-wrapp">
     {rendomColor()}
   </div>
 )
