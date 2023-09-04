@@ -41,15 +41,6 @@ const Lines = ({data, total}) => {
   return line
 }
 
-
-// const ColorLevel = ({style}) => {
-//   return (
-
-//   )
-// }
-
-
-
 function App() {
     const title = '30 Days Of React'
     const subtitle = 'World Population'

@@ -1,0 +1,33 @@
+* {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+.main {
+  text-align: center;
+}
+p {
+  margin: 0;
+}
+.main-line,
+.country,
+.level,
+.quantity,
+.color-level {
+  display: inline-block;
+}
+.main-line {
+  width: 1000px;
+  text-align: left;
+}
+.country {
+  width: 20%;
+}
+.level {
+  width: 60%;
+}
+.quantity {
+  width: 20%;
+}
+.color-level {
+  background-color: #ffa500;
+  height: 20px;
+}
