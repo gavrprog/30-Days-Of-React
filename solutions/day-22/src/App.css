@@ -1,0 +1,117 @@
+.app-header,
+.app-main,
+.app-footer {
+  width: 85%;
+  padding: 10px;
+  margin: 2px auto;
+}
+
+.app-footer {
+  font-weight: 400;
+  text-align: center;
+}
+
+.disable {
+  color: transparent;
+}
+
+.list-countries {
+  display:inline-block
+}
+
+.description {
+  text-align: left;
+  margin-top: 20px;
+}
+
+.country-box {
+  margin: 10px;
+  padding: 15px;
+  height: 400px;
+  width: 230px;
+  box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.15);
+  float: left;
+}
+
+.flag {
+  text-align: center;
+}
+
+.flag > img {
+  height: 100px;
+}
+
+header {
+  border-bottom: 2px solid white;
+  padding: 10px;
+  text-align: center;
+}
+ 
+header,
+footer {
+  background-color: #61dbfb;
+} 
+
+.search {
+  text-align: center;
+}
+
+h1 {
+  font-size: 70px;
+  font-weight: 300;
+}
+
+h2,
+h3 {
+  font-weight: 300;
+}
+
+.btn {
+  background-color: #ffa500;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin: 3px;
+  cursor: pointer;
+  font-size: 18px;
+  color: white;
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+
+
+.main {
+  text-align: center;
+  background-color: white;
+  line-height: 45px;
+  margin-top: 20px;
+}
+p {
+  margin: 0;
+}
+.main-line,
+.country,
+.level,
+.quantity,
+.color-level {
+  display: inline-block;
+}
+.main-line {
+  width: 100%;
+  text-align: left;
+}
+.level {
+  width: 60%;
+}
+.quantity,
+.country {
+  width: 15%;
+  padding-left: 5%;
+}
+.color-level {
+  background-color: #ffa500;
+  height: 20px;
+}
