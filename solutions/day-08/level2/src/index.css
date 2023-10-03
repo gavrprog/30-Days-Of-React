@@ -1,0 +1,18 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+  line-height: 1.5;
+  font-family: 'Montserrat';
+  font-weight: 300;
+  color: black;
+}
+
+.root {
+  position: relative;
+}

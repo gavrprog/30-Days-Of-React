@@ -1,0 +1,87 @@
+.header-wrapper,
+.main-wrapper,
+.footer-wrapper {
+  width: 85%;
+  margin: auto;
+}
+
+.header-wrapper,
+.main-wrapper {
+  padding: 10px;
+  margin: 2px auto;
+}
+
+header {
+  border-bottom: 2px solid white;
+  padding: 10px;
+}
+ 
+header,
+footer {
+  background-color: #61dbfb;
+} 
+
+.app {
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 70px;
+  font-weight: 300;
+}
+
+h2,
+h3 {
+  font-weight: 300;
+}
+
+main {
+  padding: 10px 10px 60px;
+  /* Height of the footer */
+}
+
+ul {
+  margin-left: 15px;
+}
+
+ul li {
+  list-style: none;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  border-top: 2px solid white;
+}
+
+.footer-wrapper {
+  font-weight: 400;
+  text-align: center;
+  line-height: 60px;
+}
+
+.user-card {
+  margin-top: 10px;
+}
+
+.user-card > img {
+  border-radius: 50%;
+  width: 14%;
+}
+
+.btn {
+  background-color: #6cf;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin: 3px;
+  cursor: pointer;
+  font-size: 18px;
+  color: white;
+}
+
+.btn:hover {
+  cursor: pointer;
+}
