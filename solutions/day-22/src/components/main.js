@@ -52,10 +52,8 @@ function Main({countries}){
   return (
     <main className="app-main">
         <div className="list-countries">
-                    {countries.map((country, index) => <Country country={country} key={index}/>)}
+            {countries.map((country, index) => <Country country={country} key={index}/>)}
         </div>
-
-
     </main>
   )
 }
