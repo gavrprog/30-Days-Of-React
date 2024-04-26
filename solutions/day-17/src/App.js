@@ -10,6 +10,7 @@ import {
 const Home = () => <h1>Welcome Home</h1>
 const About = () => <h1>About Us</h1>
 const Contact = () => <h1>Contact us</h1>
+const NotFound = () => <h1>The page your looking for not found</h1>
 
 const challenges = [
   {
@@ -169,14 +170,13 @@ const Challenges = () => {
         ))}
       </ul>
         <Routes>
-          <Route path={''} element={<h1>Choose any of the challenges</h1>} />
+          <Route path={''} element={<h3>Choose any of the challenges</h3>} />
           <Route path={`${slug}`} element={<Challenge challenge={challenge} />} />
         </Routes>
     </div>
   )
 }
 
-const NotFound = () => <h1>The page your looking for not found</h1>
 const Navbar = () => (
   <ul>
     <li>
@@ -200,10 +200,10 @@ class App extends Component {
         <div className='App'>
           <Navbar />
           <Routes>
+            <Route path='/' element={<Home/>} />            
             <Route path='/about' element={<About/>} />
             <Route path='/contact' element={<Contact/>} />
             <Route path='/challenges/*' element={<Challenges/>} />
-            <Route path='/' element={<Home/>} />
             <Route elemet={<NotFound/>} />
           </Routes>
         </div>
